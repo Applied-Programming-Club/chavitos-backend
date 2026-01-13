@@ -7,6 +7,10 @@ def auth_middleware(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         # TODO: Implement authentication middleware
+        # use request.headers
+        # Exceptions thrown by jwt decode: jwt.ExpiredSignatureError, jwt.InvalidTokenError:
+        # pass thigns in using g.username
+
         
         return f(*args, **kwargs)
     

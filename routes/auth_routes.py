@@ -27,7 +27,7 @@ def login():
     
     # TODO: Implement login logic
     
-    pass
+    return jsonify({"message": "Login successful"}), 200
 
 
 @auth_bp.route("/register", methods=["POST"])
@@ -48,4 +48,4 @@ def register():
     except Exception as e:
         return jsonify({"error": "User already exists!"}), 409
 
-    pass
+    return jsonify({"message": "Login successful"}), 200

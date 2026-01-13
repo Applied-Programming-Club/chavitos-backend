@@ -28,7 +28,7 @@ def leave_queue():
 @queue_bp.route("/status", methods=["GET"])
 @auth_middleware
 def get_queue_status():
-    username = g.username
+    jwt = request.headers.get("Authorization", None)
     
     # TODO: Implement get queue status logic
     
